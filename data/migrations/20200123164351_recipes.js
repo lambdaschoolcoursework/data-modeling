@@ -8,11 +8,13 @@ exports.up = (knex, Promise) => {
             table.string('instructions')
                 .notNullable();
         })
+        
         .createTable('ingredients', table => {
             table.increments();
             table.string('ingredient')
                 .notNullable();
         })
+
         .createTable('recipe_ingredients', table => {
             table.increments();
             table.integer('recipe_id')
